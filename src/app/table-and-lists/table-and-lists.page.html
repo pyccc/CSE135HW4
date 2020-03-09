@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+    <ion-header>
+		<ion-toolbar>
+		  <ion-title>Table and List Page</ion-title>
+		  <ion-buttons slot="end">
+			<ion-button routerLink="/profile">
+			  <ion-icon slot="icon-only" name="person"></ion-icon>
+			</ion-button>
+		  </ion-buttons>
+		</ion-toolbar>
+	  
+	  </ion-header>
+    <ion-content>
+		<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+        <script src="../scripts/tracker.js"></script>
+        <script src="../../../functions/index.js"></script>
+        <nav name="testButton" id="navigation">
+            <a class="navigation" href="index.html">Home</a> 
+            <a class="navigation" href="images.html">Images</a> 
+            <a class="navigation" href="form.html">Form</a> 
+            <a class="navigation" href="table_and_lists.html">Table&List</a> 
+            <a class="navigation" href="externals.html">Externals</a>
+            <a class="navigation" href="reportertest.html">Reportertest</a>
+        </nav>
+        <br><br>
+        <table>
+            <caption>
+                Weekly Schedule
+            </caption>
+            <colgroup>
+                <col span="6" style="background-color:grey">
+              </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8:00-9:00</td>
+                    <td class="lecture">CSE135</td>
+                    <td></td>
+                    <td class="lecture">CSE135</td>
+                    <td></td>
+                    <td class="lecture">CSE135</td>
+                </tr>
+                <tr>
+                    <td>9:00-10:00</td>
+                    <td></td>
+                    <td class="lecture">CSE253</td>
+                    <td></td>
+                    <td class="lecture">CSE253</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10:00-11:00</td>
+                    <td></td>
+                    <td class="lecture">CSE253</td>
+                    <td></td>
+                    <td class="lecture">CSE253</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11:00-12:00</td>
+                    <td class="discussion">CSE135</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12:00-13:00</td>
+                    <td rowspan="5" colspan="5"></td>
+                </tr>
+                <tr><td>13:00-14:00</td></tr>
+                <tr><td>14:00-15:00</td></tr>
+                <tr><td>15:00-16:00</td></tr>
+                <tr><td>16:00-17:00</td></tr>
+                <tr>
+                    <td>17:00-18:00</td>
+                    <td class="lecture">CSE120</td>
+                    <td></td>
+                    <td class="lecture">CSE120</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>18:00-19:00</td>
+                    <td class="lecture">CSE120</td>
+                    <td class="discussion">CSE120</td>
+                    <td class="lecture">CSE120</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>19:00-20:00 class="lecture"</td>
+                    <td class="lecture">CSE167</td>
+                    <td></td>
+                    <td class="lecture">CSE167</td>
+                    <td class="discussion">CSE167</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td colspan="5">Totally 4 courses with 16 units.<br>
+                    Burlywood color for leture and blue for discussion.</td>
+                </tr>
+            </tfoot>
+
+        </table>
+        <br>
+        <h4>Things to finish</h4>
+        <ol>
+            <li>CSE120 PA2. 1.26 ddl</li>
+            <li>CSE167 HW1. 1.31 ddl</li>
+            <li>CSE135 HW2. </li>
+            <li>CSE253 PA2. </li>
+        </ol>
+        <h4>Things to learn</h4>
+        <ul>
+            <li>Operating System</li>
+            <li>Computer Graphics</li>
+            <li>Database </li>
+            <li>Deep Learning</li>
+        </ul>
+        <h4>Inspired Quotes</h4>
+        <dl>
+            <dt>Martin Luther King, Jr.</dt>
+            <dd>We are not makers of history. We are made by history.</dd>
+            <dd>As the center of non-violence stands the principle of love.</dd>
+        </dl>
+
+        
+        <br><br><br>
+        <h4>Results for loading time (DOMContentLoaded/ms, Loadtime/ms)</h4>
+        <ol>
+            <li>109, 181(10:01)</li><li>95, 147(10:04)</li><li>77, 144(10:08)</li><li>118, 179(10:15)</li><li>84, 131(10:22)</li>
+            <li>127, 190(10:30)</li><li>100, 153(10:42)</li><li>76, 134(10:50)</li><li>85, 142(10:52)</li><li>119, 173(11:20)</li>
+        </ol>
+    </ion-content>
+</html>

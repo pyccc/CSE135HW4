@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <ion-header>
+        <ion-toolbar>
+          <ion-title>Form Page</ion-title>
+          <ion-buttons slot="end">
+            <ion-button routerLink="/profile">
+              <ion-icon slot="icon-only" name="person"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      
+      </ion-header>
+
+<ion-content>
+
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="../scripts/tracker.js"></script>
+    <script src="../../../functions/index.js"></script>
+    <nav name="testButton" id="navigation">
+        <a class="navigation" href="dashboard">Home</a>
+        <a class="navigation" href="images">Images</a>
+        <a class="navigation" href="form">Form</a>
+        <a class="navigation" href="table_and_lists">Table&List</a>
+        <a class="navigation" href="externals">Externals</a>
+        <a class="navigation" href="reportertest">Reportertest</a>
+    </nav>
+    <br><br>
+    <form action="/post.php" method="post" class="form-example">
+        <h2>Your feedback for CSE135</h2>
+        <div class="form-example">
+            <label for="name">Enter your name: </label>
+            <input type="text" placeholder="Full Name" name="name" id="name" required>
+        </div>
+        <div class="form-example">
+            <label for="pid">Enter your pid: </label>
+            <input type="password" name="pid" id="pid"><br>
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email"><br>
+            <label for="dob">Enter your date of birth: </label>
+            <input type="date" name="dob" id="dob"><br>
+            <label for="url">Enter url for your linkedin or other pages: </label>
+            <input type="url" name="url" id="url"><br>
+        </div><br>
+
+        <label for="background-select">Your academic background: </label>
+        <select id="background-select">
+            <optgroup label="Major in CSE">
+                <option>Full-time undergraduate</option>
+                <option>Exchange student</option>
+                <option>Graduate</option>
+            </optgroup>
+            <optgroup label="Not major in CSE">
+                <option>From other Science and engineering majors</option>
+                <option>others</option>
+            </optgroup>
+        </select><br><br>
+
+        <fieldset>
+            <legend>Choose how many scores you will grade this course so far</legend>
+
+            <input type="radio" id="High">
+            <label for="High">10</label><br />
+            <input type="radio" id="Medium_high">
+            <label for="Medium_high">7</label><br />
+            <input type="radio" id="Medium_low">
+            <label for="Medium_low">3</label><br>
+            <input type="radio" id="Low">
+            <label for="Low">1</label>
+        </fieldset><br>
+
+        <label for="course-choice">Why do you choose this course</label>
+        <input list="choice-reasons" id="course-choice" name="course-choice" />
+        <datalist id="choice-reasons">
+            <option value="I love the topic">
+            <option value="My firend refers this course to me">
+            <option value="I enojoy all courses hold by this professor">
+            <option value="I just randomly enroll it.">
+        </datalist><br><br>
+
+        <label for="progress">Assignment Progrss:</label>
+        <meter id="progress" min="0" max="100" low="33" high="66" optimum="80" value="20">
+            at 20/100</meter><br><br>
+
+        <label for="c_progress">Course progress:</label>
+        <progress id="c_progress" max="100" value="20"> 20% </progress><br><br>
+
+        <label for="comment">Any comment about this oucrse:</label><br>
+        <textarea id="comment" name="comment" rows="5" cols="33">Add your comments here...</textarea><br><br>
+
+        <button id="form_example_button" style="float: left; margin-right: 40px;" class="favorite styled"
+            type="button">Refresh to start a new one.</button>
+        <div class="form" style="float: left;">
+            <input type="submit" value="Submit!">
+        </div>
+
+    </form>
+
+    <br><br><br>
+    <h4>Results for loading time (DOMContentLoaded/ms, Loadtime/ms)</h4>
+    <ol>
+        <li>462, 510(10:01)</li>
+        <li>119, 189(10:04)</li>
+        <li>114, 169(10:08)</li>
+        <li>118, 171(10:15)</li>
+        <li>102, 182(10:22)</li>
+        <li>115, 165(10:30)</li>
+        <li>113, 168(10:42)</li>
+        <li>121, 192(10:50)</li>
+        <li>109, 166(10:52)</li>
+        <li>142, 199(11:20)</li>
+    </ol>
+</ion-content>
+
+</html>

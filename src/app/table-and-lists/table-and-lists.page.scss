@@ -1,0 +1,81 @@
+nav#navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(75, 72, 72);
+  }
+  
+a.navigation{
+    float: left;
+    border-right: 1px solid #bbb;
+}
+  
+a.navigation  {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+a.navigation:hover {
+    background-color: rgb(51, 131, 5);
+}
+header {
+    color: brown;
+    text-align: center;
+    font: bold;
+    font: italic;
+    font:underline;
+    font-size: 40px;
+}
+.grid-footer{
+    display: grid;
+    grid-template-areas:
+    'address address about'
+    'ph ph ph'
+}
+address#address{
+    grid-area: address;
+}
+div#ph{
+    grid-area: ph;
+}
+p.footer-me-about{
+    grid-area: about;
+}
+footer{
+    padding: 1px;
+    margin: 10px;
+}
+img.photo{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+footer{
+    background-color: grey;
+}
+
+caption{
+    text-align: center;
+    font-size: 40px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+td.lecture {
+    background-color: burlywood;
+}
+td.discussion {
+    background-color: cornflowerblue;
+}
+dl{
+    padding-left: 20px;
+}

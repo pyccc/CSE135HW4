@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+    <ion-header>
+        <ion-toolbar>
+          <ion-title>Images Page</ion-title>
+          <ion-buttons slot="end">
+            <ion-button routerLink="/profile">
+              <ion-icon slot="icon-only" name="person"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      
+      </ion-header>
+
+
+<ion-content>
+
+    <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="../scripts/tracker.js"></script>
+    <script src="../../../functions/index.js"></script>
+    <nav name="testButton" id="navigation">
+        <a class="navigation" href="dashboard">Home</a>
+        <a class="navigation" href="images">Images</a>
+        <a class="navigation" href="form">Form</a>
+        <a class="navigation" href="table_and_lists">Table&List</a>
+        <a class="navigation" href="externals">Externals</a>
+        <a class="navigation" href="reportertest">Reportertest</a>
+    </nav>
+    <br>
+    <img src="../image/smiley.gif" alt="gif" width="100" height="100"> &nbsp; &nbsp;
+    <img src="../image/gif.gif" alt="animated_gif" width="250" height="200"> &nbsp; &nbsp;
+    <picture>
+        <source media="(min-width: 200px)" srcset="../image/img_pink_flowers.jpg">
+        <source media="(min-width: 100px)" srcset="../image/game.jpg">
+        <img id="testmouseimg2" src="../image/game.jpg" alt="Flowers" style="width:auto;">
+    </picture>
+    <!--img src="../image/game.jpg" alt="jpeg" width="250" height="200"--> &nbsp; &nbsp;
+    <img src="../image/eg.png" alt="png" width="200" height="100"> &nbsp; &nbsp;
+    <br><br><br>
+    <img src="../image/ani.png" alt="animated png" width="200" height="200"> &nbsp; &nbsp;
+    <img src="../image/night.webp" alt="webp" width="300" height="200"> &nbsp; &nbsp;
+    <img src="../image/game.svg" alt="svg" width="300" height="200">
+
+
+    <br><br><br>
+    <h4>Results for loading time (DOMContentLoaded/ms, Loadtime/ms)</h4>
+    <ol>
+        <li>156, 212(10:01)</li>
+        <li>116, 179(10:04)</li>
+        <li>100, 163(10:08)</li>
+        <li>118, 171(10:15)</li>
+        <li>195, 301(10:22)</li>
+        <li>187, 511(10:30)</li>
+        <li>100, 253(10:42)</li>
+        <li>113, 172(10:50)</li>
+        <li>111, 166(10:52)</li>
+        <li>165, 334(11:20)</li>
+    </ol>
+</ion-content>
+
+</html>

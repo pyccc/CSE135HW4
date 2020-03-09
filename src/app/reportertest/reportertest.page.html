@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+
+<ion-header>
+    <title>Test Page</title>
+
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="../scripts/tracker.js"></script>
+    <script src="../../../functions/index.js"></script>
+</ion-header>
+
+<ion-content>
+
+
+    <nav name="testButton" id="navigation">
+        <a class="navigation" href="dashboard">Home</a>
+        <a class="navigation" href="images">Images</a>
+        <a class="navigation" href="form">Form</a>
+        <a class="navigation" href="table_and_lists">Table&List</a>
+        <a class="navigation" href="externals">Externals</a>
+        <a class="navigation" href="reportertest">Reportertest</a>
+    </nav>
+    <br><br>
+    <img id="testmouseimg" class="photo" alt="photo" src="../image/photo.jpg">
+
+    <table>
+        <caption>
+            Static Collected Data
+        </caption>
+        <tr>
+            <td>
+                <button id="useragent" onclick="UserAgent()">user-agent</button>
+                <p id="user-agent"></p>
+                <script>
+                    function UserAgent() {
+                        let x = localStorage.getItem("user-agent");
+                        document.getElementById("user-agent").innerHTML = x;
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="userlanguage" onclick="UserLanguage()">user-language</button>
+                <p id="user-language"></p>
+                <script>
+                    function UserLanguage() {
+                        let x = localStorage.getItem("user-language");
+                        document.getElementById("user-language").innerHTML = x;
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="cookies" onclick="cookies3()">cookies</button>
+                <p id="cookie1"></p>
+                <script>
+                    function cookies3() {
+                        let x = localStorage.getItem("cookies_on");
+                        document.getElementById("cookie1").innerHTML = x;
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="js()">js_on</button>
+                <p id="javascript"></p>
+                <script>
+                    function js() {
+                        //let x = localStorage.getItem("javascript_on");
+                        let x = document.querySelector("script[src*='" + "reporter.js" + "']");
+                        if (x) {
+                            localStorage.setItem("javascript_on", true);
+                            document.getElementById("javascript").innerHTML = localStorage.getItem("javascript_on");
+                        } else {
+                            document.getElementById("javascript").innerHTML = localStorage.getItem("javascript_on");
+                        }
+                        //let x = localStorage.getItem("javascript_on");
+                        //document.getElementById("javascript").innerHTML = x;
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="image()">images_on</button>
+                <p id="image"></p>
+                <script>
+                    function image() {
+                        let x = localStorage.getItem("image_on");
+                        document.getElementById("image").innerHTML = x;
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="get_css()">css_on</button>
+                <p id="get_css"></p>
+                <script>
+                    function get_css() {
+                        let x = localStorage.getItem("css_on");
+                        document.getElementById("get_css").innerHTML = x;
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="sizewidth()">sizewidth</button>
+                <p id="sizewidth"></p>
+                <script>
+                    function sizewidth() {
+                        let x = localStorage.getItem("size-width");
+                        document.getElementById("sizewidth").innerHTML = x;
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="sizeheight()">sizeheight</button>
+                <p id="sizeheight"></p>
+                <script>
+                    function sizeheight() {
+                        let x = localStorage.getItem("size-height");
+                        document.getElementById("sizeheight").innerHTML = x;
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="windowwidth()">window-width</button>
+                <p id="windowwidth"></p>
+                <script>
+                    function windowwidth() {
+                        let x = localStorage.getItem("window-width");
+                        document.getElementById("windowwidth").innerHTML = x;
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="windowheight()">window-height</button>
+                <p id="windowheight"></p>
+                <script>
+                    function windowheight() {
+                        let x = localStorage.getItem("window-height");
+                        document.getElementById("windowheight").innerHTML = x;
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="connectiontype()">connection-type</button>
+                <p id="connection-type"></p>
+                <script>
+                    function connectiontype() {
+                        let x = localStorage.getItem("connection-type");
+                        document.getElementById("connection-type").innerHTML = x;
+                    }
+                </script>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+
+    <table>
+        <caption>
+            Performance Information
+        </caption>
+        <tr>
+            <td>
+                <button onclick="get_testpage()">test_page</button></td>
+            <td>
+                <p id="test_page_initial"></p>
+            </td>
+            <td>
+                <p id="test_page_end"></p>
+            </td>
+            <td>
+                <p id="test_page_total"></p>
+            </td>
+            <script>
+                function get_testpage() {
+                    let x = localStorage.getItem("reportertest.html_initial");
+                    document.getElementById("test_page_initial").innerHTML = "Initial time:" + x;
+                    let y = localStorage.getItem("reportertest.html_end");
+                    document.getElementById("test_page_end").innerHTML = "End time:" + y;
+                    let z = localStorage.getItem("reportertest.html_total");
+                    document.getElementById("test_page_total").innerHTML = "Total time:" + z;
+                }
+            </script>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="get_indexpage()">index_page</button></td>
+            <td>
+                <p id="index_page_initial"></p>
+            </td>
+            <td>
+                <p id="index_page_end"></p>
+            </td>
+            <td>
+                <p id="index_page_total"></p>
+            </td>
+            <script>
+                function get_indexpage() {
+                    let x = localStorage.getItem("index.html_initial");
+                    document.getElementById("index_page_initial").innerHTML = "Initial time:" + x;
+                    let y = localStorage.getItem("index.html_end");
+                    document.getElementById("index_page_end").innerHTML = "End time:" + y;
+                    let z = localStorage.getItem("index.html_total");
+                    document.getElementById("index_page_total").innerHTML = "Total time:" + z;
+                }
+            </script>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="get_imagepage()">image_page</button></td>
+            <td>
+                <p id="image_page_initial"></p>
+            </td>
+            <td>
+                <p id="image_page_end"></p>
+            </td>
+            <td>
+                <p id="image_page_total"></p>
+            </td>
+            <script>
+                function get_imagepage() {
+                    let x = localStorage.getItem("images.html_initial");
+                    document.getElementById("image_page_initial").innerHTML = "Initial time:" + x;
+                    let y = localStorage.getItem("images.html_end");
+                    document.getElementById("image_page_end").innerHTML = "End time:" + y;
+                    let z = localStorage.getItem("images.html_total");
+                    document.getElementById("image_page_total").innerHTML = "Total time:" + z;
+                }
+            </script>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="get_formpage()">form_page</button></td>
+            <td>
+                <p id="form_page_initial"></p>
+            </td>
+            <td>
+                <p id="form_page_end"></p>
+            </td>
+            <td>
+                <p id="form_page_total"></p>
+            </td>
+            <script>
+                function get_formpage() {
+                    let x = localStorage.getItem("form.html_initial");
+                    document.getElementById("form_page_initial").innerHTML = "Initial time:" + x;
+                    let y = localStorage.getItem("form.html_end");
+                    document.getElementById("form_page_end").innerHTML = "End time:" + y;
+                    let z = localStorage.getItem("form.html_total");
+                    document.getElementById("form_page_total").innerHTML = "Total time:" + z;
+                }
+            </script>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="get_externalspage()">externals_page</button></td>
+            <td>
+                <p id="externals_page_initial"></p>
+            </td>
+            <td>
+                <p id="externals_page_end"></p>
+            </td>
+            <td>
+                <p id="externals_page_total"></p>
+            </td>
+            <script>
+                function get_externalspage() {
+                    let x = localStorage.getItem("externals.html_initial");
+                    document.getElementById("externals_page_initial").innerHTML = "Initial time:" + x;
+                    let y = localStorage.getItem("externals.html_end");
+                    document.getElementById("externals_page_end").innerHTML = "End time:" + y;
+                    let z = localStorage.getItem("externals.html_total");
+                    document.getElementById("externals_page_total").innerHTML = "Total time:" + z;
+                }
+            </script>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="get_tablepage()">table_page</button></td>
+            <td>
+                <p id="table_page_initial"></p>
+            </td>
+            <td>
+                <p id="table_page_end"></p>
+            </td>
+            <td>
+                <p id="table_page_total"></p>
+            </td>
+            <script>
+                function get_tablepage() {
+                    let x = localStorage.getItem("table_and_lists.html_initial");
+                    document.getElementById("table_page_initial").innerHTML = "Initial time:" + x;
+                    let y = localStorage.getItem("table_and_lists.html_end");
+                    document.getElementById("table_page_end").innerHTML = "End time:" + y;
+                    let z = localStorage.getItem("table_and_lists.html_total");
+                    document.getElementById("table_page_total").innerHTML = "Total time:" + z;
+                }
+            </script>
+        </tr>
+    </table>
+    <br><br>
+
+    <div id="dynamic">
+        <h1>Dynamic Data</h1>
+
+        <div class="main" id="section1">
+            <h2>Click</h2>
+            <button onclick="click_details()">details</button>
+            <p id="click_details"></p>
+            <script>
+                function click_details() {
+                    //console.log(document.getElementById("click_details"));
+                    let x = localStorage.getItem("click");
+                    document.getElementById("click_details").innerHTML = x;
+                }
+            </script>
+            <button onclick="Purgeclick()">purge click history</button>
+            <script>
+                function Purgeclick() {
+                    let w = confirm("Are you sure to purge this entry!");
+                    if (w) {
+                        localStorage.removeItem("click");
+                    }
+                }
+            </script>
+            <br><br><a href="#section2">MouseMovement</a>
+        </div>
+
+        <div class="main" id="section2">
+            <h2>MouseMovement</h2>
+            <button onclick="mouse_details()">details</button>
+            <p id="mouse_details"></p>
+            <script>
+                function mouse_details() {
+                    //console.log(document.getElementById("click_details"));
+                    let x = localStorage.getItem("mouse");
+                    document.getElementById("mouse_details").innerHTML = x;
+                }
+            </script>
+            <button onclick="Purgemousemovement()">purge mouse movement history</button>
+            <script>
+                function Purgemousemovement() {
+                    let w = confirm("Are you sure to purge this entry!");
+                    if (w) {
+                        localStorage.removeItem("mouse");
+                    }
+                }
+            </script>
+            <br><br><a href="#section1">Click</a><br>
+            <a href="#section3">Keystrokes</a>
+        </div>
+
+        <div class="main" id="section3">
+            <h2>Keystrokes</h2>
+            <button onclick="keystrokes_details()">details</button>
+            <p id="keystrokes_details"></p>
+            <script>
+                function keystrokes_details() {
+                    //console.log(document.getElementById("click_details"));
+                    let x = localStorage.getItem("keystrokes");
+                    document.getElementById("keystrokes_details").innerHTML = x;
+                }
+            </script>
+            <button onclick="Purgekeystrokes()">purge keystrokes history</button>
+            <script>
+                function Purgekeystrokes() {
+                    let w = confirm("Are you sure to purge this entry!");
+                    if (w) {
+                        localStorage.removeItem("keystrokes");
+                    }
+                }
+            </script>
+            <br><br><a href="#section2">MouseMovement</a><br>
+            <a href="#section4">Scrolling</a>
+        </div>
+
+        <div class="main" id="section4">
+            <h2>Scrolling</h2>
+            <button onclick="scroll_details()">details</button>
+            <p id="scroll_details"></p>
+            <script>
+                function scroll_details() {
+                    //console.log(document.getElementById("click_details"));
+                    let x = localStorage.getItem("scroll");
+                    document.getElementById("scroll_details").innerHTML = x;
+                }
+            </script>
+            <button onclick="Purgescrolling()">purge scrolling history</button>
+            <script>
+                function Purgescrolling() {
+                    let w = confirm("Are you sure to purge this entry!");
+                    if (w) {
+                        localStorage.removeItem("scroll");
+                    }
+                }
+            </script>
+            <br><br><a href="#section3">Keystrokes</a><br>
+            <a href="#section5">unloading</a>
+        </div>
+
+        <div class="main" id="section5">
+            <h2>PageUnloading</h2>
+            <button onclick="unloading_details()">details</button>
+            <p id="unloading_details"></p>
+            <script>
+                function unloading_details() {
+                    //console.log(document.getElementById("click_details"));
+                    let x = localStorage.getItem("unloading");
+                    document.getElementById("unloading_details").innerHTML = x;
+                }
+            </script>
+            <button onclick="Purgeunloading()">purge unloading history</button>
+            <script>
+                function Purgeunloading() {
+                    let w = confirm("Are you sure to purge this entry!");
+                    if (w) {
+                        localStorage.removeItem("unloading");
+                    }
+                }
+            </script>
+            <br><br><a href="#section4">Scrolling</a><br>
+            <a href="#section6">IdleTime</a>
+        </div>
+
+        <div class="main" id="section6">
+            <h2>IdleTime</h2>
+            <button onclick="idletime_details()">details</button>
+            <p id="idletime_details"></p>
+            <script>
+                function idletime_details() {
+                    //console.log(document.getElementById("click_details"));
+                    let x = localStorage.getItem("idletime");
+                    document.getElementById("idletime_details").innerHTML = x;
+                }
+            </script>
+            <button onclick="Purgeidletime()">purge idle time history</button>
+            <script>
+                function Purgeidletime() {
+                    let w = confirm("Are you sure to purge this entry!");
+                    if (w) {
+                        localStorage.removeItem("idletime");
+                    }
+                }
+            </script>
+            <br><br><a href="#section5">PageUnloading</a>
+        </div>
+    </div>
+    <br><br>
+    <button id="purgeall" onclick="Purgeall()">purge all history</button>
+    <script>
+        function Purgeall() {
+            let w = confirm("Are you sure to purge this entry!");
+            if (w) {
+                localStorage.clear();
+            }
+        }
+    </script>
+
+</ion-content>
+
+</html>

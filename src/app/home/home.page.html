@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home Page</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/profile">
+        <ion-icon slot="icon-only" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="../scripts/tracker.js"></script>
+    <script src="../../../functions/index.js"></script>
+  <main>
+    <div class="header">
+      <header>
+        Lei's Homepage~
+      </header>
+    </div>
+    <br>
+    <button class="custom_button"
+      onclick="window.open('https://us-central1-cse135-hw3-d14c9.cloudfunctions.net/collect')">NON-JS-Flow</button>
+    <br><br>
+    <nav name="testButton" id="navigation">
+      <a class="navigation" href="dashboard">Home</a>
+      <a class="navigation" href="images">Images</a>
+      <a class="navigation" href="form">Form</a>
+      <a class="navigation" href="table_and_lists">Table&List</a>
+      <a class="navigation" href="externals">Externals</a>
+      <a class="navigation" href="reportertest">Reportertest</a>
+      
+      <a class="navigation" href="reports/speed">reports/speed</a>
+      <a class="navigation" href="reports/browser">report/browser</a>
+    </nav>
+    <div class="self-intro">
+      <h1 id="name">Name: <em>Chang Lei</em></h1>
+      <img class="photo" alt="photo" src="../image/photo.jpg">
+      <h2 id="dob">Birth of Date: <i>04/05/1999</i></h2>
+      <p>Use current year to get my age.</p>
+      <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+        <input type="range" id="a" value="20">40
+        +<input type="number" id="b" value="1999">
+        =<output name="x" for="a b"></output>
+      </form>
+      <h3 id="major">Major: <code>string major = "Computer Science"</code></h3>
+      <pre id="hobbies">Hobbies: Soccer, Hiking, Bicycles. etc.
+        </pre>
+      <section id="self-intro">
+        <p>I am an exchange student in UCSD. I am pursuing my bachelor course in National University of
+          Singapore.</p>
+      </section>
+      <br><br>
+    </div>
+
+    <br><br><br>
+    <h4>Results for loading time (DOMContentLoaded/ms, Loadtime/ms)</h4>
+    <ol>
+      <li>161, 237(10:01)</li>
+      <li>156, 198(10:04)</li>
+      <li>169, 224(10:08)</li>
+      <li>145, 174(10:15)</li>
+      <li>113, 211(10:22)</li>
+      <li>147, 198(10:30)</li>
+      <li>133, 202(10:42)</li>
+      <li>144, 192(10:50)</li>
+      <li>143, 205(10:52)</li>
+      <li>124, 181(11:20)</li>
+    </ol>
+  </main>
+  <script src="../scripts/main.js"></script>
+  <script>
+    function js() {
+      //let x = localStorage.getItem("javascript_on");
+      let x = document.querySelector("script[src*='" + "main.js" + "']");
+      if (x) {
+        localStorage.setItem("javascript_on", true);
+      } else {
+        localStorage.setItem("javascript_on", false);
+      }
+    }
+  </script>
+
+  <footer>
+    <div class="grid-footer">
+      <address id="address">
+        Contact <a href="mailto:l2chang@ucsd.edu">Chang Lei.</a><br>
+        Visit me at:<br>
+        8889 Caminito Centro Plaza<br>
+        San Diego, California
+      </address>
+      <div id="ph">
+        <p>ph: 424-278-3541</p>
+      </div>
+    </div>
+    <div class="grid-footer">
+      <details>
+        <summary>Lei, myself</summary>
+        Love coding.
+        Enjoy designing websites.
+      </details>
+    </div>
+  </footer>
+</ion-content>
