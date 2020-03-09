@@ -5,12 +5,12 @@ using Angular as the programming framework.
 
 # Command
 To run the application, 
-1: install with the following npm command:
+- 1: install with the following npm command:
   npm install -g @angular/cli
   npm install -g ionic
-2: "npm install" in the root folder
-3: "npm install" in the function folder
-4: run with "ng serve"
+- 2: "npm install" in the root folder
+- 3: "npm install" in the function folder
+- 4: run with "ng serve"
 
 ## Adding Contents with Librarys
 
