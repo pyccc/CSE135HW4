@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset="utf-8">
+  <title>ZingGrid Demo</title>
+  <script src="https://cdn.zinggrid.com/zinggrid.min.js" defer></script>
+  <!--script src="../hw3/public/scripts/tracker.js"></script-->
+  <script src="grid.js"></script>
+  <style>
+    body {
+      background: #e6e6e6;
+    }
+ 
+    zing-grid {
+      overflow: hidden;
+    }
+ 
+    zing-grid[loading] {
+      height: 373px;
+    }
+  </style>
+</head>
+ 
+<body>
+  <zing-grid caption="Static data" sort filter search pager page-size="8" page-size-options="2,4,8" layout="row" viewport-stop></zing-grid> 
+</body>
+ 
+</html>
