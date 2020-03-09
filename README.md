@@ -28,3 +28,8 @@ This page consists of 3 charts containing same data: bar chart, pie chart and li
 This page consists of a data grid with static data. The data grid supports features including sorting, filtering, searching and pagination. The library we used is Zing-Grid.
 
 This is a static page that is not included in the app. You can open it directly through browser.html under root folder. We will implement data grid in our final project.
+
+
+# Diagram and Wireframes
+
+App-diagram.pdf and wireframe.pdf provide the overall architechture of our application and the per page structure. In our app, we will implement an analytic system to track user actions on each page as well as browser information. We will store the data both locally and in firebase database. The analytic results will be finally shown on speed page and browser page using charts and data grids.
