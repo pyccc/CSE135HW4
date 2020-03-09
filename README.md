@@ -3,15 +3,6 @@
 In HW4, we built the project with Ionic and Firebase. It's
 using Angular as the programming framework.
 
-## Adding Contents with Librarys
-
-- Login Page(Firebase auth)
-- Signup Page(Firebase auth)
-- Reset Password Page(Firebase auth)
-- Profile Page(Firebase auth)
-- Speed Page(HighCharts)
-- Browser Page
-
 # Command
 To run the application, 
 1: install with the following npm command:
@@ -20,6 +11,15 @@ To run the application,
 2: "npm install" in the root folder
 3: "npm install" in the function folder
 4: run with "ng serve"
+
+## Adding Contents with Librarys
+
+- Login Page(Firebase auth)
+- Signup Page(Firebase auth)
+- Reset Password Page(Firebase auth)
+- Profile Page(Firebase auth)
+- Speed Page(HighCharts)
+- Browser Page
 
 ## Speed Page
 This page consists of 3 charts containing same data: bar chart, pie chart and line chart. The data is static data. The library we use is HighCharts.
