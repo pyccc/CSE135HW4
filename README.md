@@ -1,49 +1,30 @@
-# Ionic and Firebase Authentication Starter
+# Firebase Authentication and Initial Analysis
 
-This is an authentication starter template built with Ionic and Firebase. It's
+In HW4, we built the project with Ionic and Firebase. It's
 using Angular as the programming framework.
 
-## Packages
+## Adding Contents with Librarys
 
-It's using:
+- Login Page(Firebase auth)
+- Signup Page(Firebase auth)
+- Reset Password Page(Firebase auth)
+- Profile Page(Firebase auth)
+- Speed Page(HighCharts)
+- Browser Page
 
-- `@angular`: "9.0.0"
-- `@angular/fire`: "5.3.0"
-- `@ionic/angular`: "5.0.0"
-- `firebase`: "7.8.1"
+# Command
+To run the application, 
+1: install with the following npm command:
+  npm install -g @angular/cli
+  npm install -g ionic
+2: "npm install" in the root folder
+3: "npm install" in the function folder
+4: run with "ng serve"
 
-I'll do my best to update the `README` when I update those packages.
+## Speed Page
+This page consists of 3 charts containing same data: bar chart, pie chart and line chart. The data is static data. The library we use is HighCharts.
 
-## Contents
+## Browser Page
+This page consists of a data grid with static data. The data grid supports features including sorting, filtering, searching and pagination. The library we used is Zing-Grid.
 
-This starter templates has:
-
-- Login Page
-- Signup Page
-- Reset Password Page
-- Profile Page
-
-It extracts the common login/signup/reset functionality into an authentication
-component that creates the authentication form and passes the user credentials
-to the parent component (_either Login, Signup, or ResetPassword_).
-
-## Licence
-
-The starter is licenced as MIT, you can read the full
-[licence here](/licence.md).
-
-## Payment
-
-The template is free, but if you want to give me money, you can do it through
-[this link](https://paypal.me/javebratt). Contact me if you need an invoice to
-mark it as a business expense.
-
-## Usage
-
-I have built a tutorial that explains how to use this starter. You can find it
-in the
-[Firebase Authentication](https://courses.jsmobiledev.com/course/authentication/intro)
-course on my [main course site](https://courses.jsmobiledev.com/).
-
-Have ideas on how you'd like this explained?
-[Shoot me an email](https://jsmobiledev.com/contact)
+This is a static page that is not included in the app. You can open it directly through browser.html under root folder. We will implement data grid in our final project.
