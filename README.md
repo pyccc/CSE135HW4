@@ -1,49 +1,35 @@
-# Ionic and Firebase Authentication Starter
+# Firebase Authentication and Initial Analysis
 
-This is an authentication starter template built with Ionic and Firebase. It's
+In HW4, we built the project with Ionic and Firebase. It's
 using Angular as the programming framework.
 
-## Packages
+# Command
+To run the application, 
+1: install with the following npm command:
+  npm install -g @angular/cli
+  npm install -g ionic
+2: "npm install" in the root folder
+3: "npm install" in the function folder
+4: run with "ng serve"
 
-It's using:
+## Adding Contents with Librarys
 
-- `@angular`: "9.0.0"
-- `@angular/fire`: "5.3.0"
-- `@ionic/angular`: "5.0.0"
-- `firebase`: "7.8.1"
+- Login Page(Firebase auth)
+- Signup Page(Firebase auth)
+- Reset Password Page(Firebase auth)
+- Profile Page(Firebase auth)
+- Speed Page(HighCharts)
+- Browser Page
 
-I'll do my best to update the `README` when I update those packages.
+## Speed Page
+This page consists of 3 charts containing same data: bar chart, pie chart and line chart. The data is static data. The library we use is HighCharts.
 
-## Contents
+## Browser Page
+This page consists of a data grid with static data. The data grid supports features including sorting, filtering, searching and pagination. The library we used is Zing-Grid.
 
-This starter templates has:
+This is a static page that is not included in the app. You can open it directly through browser.html under root folder. We will implement data grid in our final project.
 
-- Login Page
-- Signup Page
-- Reset Password Page
-- Profile Page
 
-It extracts the common login/signup/reset functionality into an authentication
-component that creates the authentication form and passes the user credentials
-to the parent component (_either Login, Signup, or ResetPassword_).
+# Diagram and Wireframes
 
-## Licence
-
-The starter is licenced as MIT, you can read the full
-[licence here](/licence.md).
-
-## Payment
-
-The template is free, but if you want to give me money, you can do it through
-[this link](https://paypal.me/javebratt). Contact me if you need an invoice to
-mark it as a business expense.
-
-## Usage
-
-I have built a tutorial that explains how to use this starter. You can find it
-in the
-[Firebase Authentication](https://courses.jsmobiledev.com/course/authentication/intro)
-course on my [main course site](https://courses.jsmobiledev.com/).
-
-Have ideas on how you'd like this explained?
-[Shoot me an email](https://jsmobiledev.com/contact)
+App-diagram.pdf and wireframe.pdf provide the overall architechture of our application and the per page structure. In our app, we will implement an analytic system to track user actions on each page as well as browser information. We will store the data both locally and in firebase database. The analytic results will be finally shown on speed page and browser page using charts and data grids.
